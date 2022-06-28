@@ -1,0 +1,172 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    font-size: 12px;
+    color: #212529;
+    border-bottom: 1px solid silver;
+}
+
+.container:last-child {
+    border: none;
+}
+
+.image {
+    width: 30px !important;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.name {
+    width: 150px;
+    font-size: 14px;
+    margin-left: 0;
+    margin-right: 0;
+    text-align: left;
+    font-weight: bold;
+    color: #333333;
+}
+
+.symbol {
+    display: none;
+}
+.bigSymbol {
+    display: none;
+}
+
+.currentPrice {
+    text-align: left;
+    width: 100px;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.greenPriceChange,
+.redPriceChange {
+    width: 100px;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.redPriceChange {
+    color: rgb(255, 38, 38);
+}
+
+.greenPriceChange {
+    color: rgb(0, 204, 0);
+    padding-left: 5px;
+}
+
+.marketCap {
+    text-align: right;
+    margin-left: 5px;
+    margin-right: auto;
+}
+
+.rank {
+    padding-right: 40px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.bigRank {
+    padding-right: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.greenDot,
+.redDot {
+    display: none;
+}
+
+.greenDot {
+    background-color: rgb(0, 204, 0);
+}
+
+.redDot {
+    background-color: rgb(255, 38, 38);
+}
+
+@media (min-width: 768px) {
+    .symbol {
+        display: inline;
+        text-align: left;
+        width: 100px;
+        margin-left: 10px;
+        margin-right: auto;
+    }
+    .bigSymbol {
+        display: inline;
+        text-align: left;
+        width: 100px;
+        margin-left: 10px;
+        margin-right: auto;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    .marketCap {
+        display: none;
+    }
+    .greenPriceChange,
+    .redPriceChange {
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .name {
+        display: none;
+    }
+    .symbol {
+        display: inline;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        font-weight: bold;
+        width: 100px;
+    }
+    .rank {
+        padding-right: 8px;
+    }
+    .bigRank {
+        padding-right: 5px;
+    }
+    .currentPrice {
+        text-align: right;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .greenPriceChange,
+    .redPriceChange {
+        display: none;
+    }
+
+    .bigSymbol {
+        display: inline;
+        margin-left: 0;
+        margin-right: 0;
+        text-align: left;
+        font-weight: bold;
+        width: 100px;
+    }
+
+    .greenDot,
+    .redDot {
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        display: inline-block;
+        margin: 0 auto;
+        padding: 5px;
+        display: inline;
+    }
+}
