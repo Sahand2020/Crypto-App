@@ -31,32 +31,34 @@ const Landing = () => {
     );
 
     return (
-        <>
-            <input
-                type="text"
-                placeholder="Search"
-                className={styles.input}
-                onChange={searchHandler}
-            />
+        <div>
             {coins.length ? (
-                <div className={styles.coinContainer}>
-                    {searchedCoins.map((coin) => (
-                        <Coin
-                            key={coin.id}
-                            name={coin.name}
-                            image={coin.image}
-                            symbol={coin.symbol}
-                            price={coin.current_price}
-                            marketCap={coin.market_cap}
-                            priceChange={coin.price_change_percentage_24h}
-                            rank={coin.market_cap_rank}
-                        />
-                    ))}
-                </div>
+                <>
+                    <input
+                        type="text"
+                        placeholder="Search"
+                        className={styles.input}
+                        onChange={searchHandler}
+                    />
+                    <div className={styles.coinContainer}>
+                        {searchedCoins.map((coin) => (
+                            <Coin
+                                key={coin.id}
+                                name={coin.name}
+                                image={coin.image}
+                                symbol={coin.symbol}
+                                price={coin.current_price}
+                                marketCap={coin.market_cap}
+                                priceChange={coin.price_change_percentage_24h}
+                                rank={coin.market_cap_rank}
+                            />
+                        ))}
+                    </div>
+                </>
             ) : (
                 <Loader />
             )}
-        </>
+        </div>
     );
 };
 
